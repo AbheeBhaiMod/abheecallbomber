@@ -1,32 +1,44 @@
 <div align="center">
 
-# 🌌 𝖀𝕷𝕿𝕽𝕬 𝕮𝕬𝕭𝕷 𝕭𝕺𝕸𝕭𝕰𝕽 🌌
-### ⚡ 𝕻𝕽𝕺𝕱𝕰𝕾𝕾𝕺𝕽 𝕬𝕭𝕳𝕰𝕰𝕭𝕳𝕬𝕴 ⚡
+# 🌌 ⚡ CALL BOMBER V2 ⚡ 🌌
+### ⚡ PROFESSOR ABHEEBHAI ⚡
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=00FF41&center=true&vCenter=true&width=435&lines=DEVELOPED+BY+ABHEEBHAI;LIVE+NEON+EXPERIENCE;REAL+CALL+BOMBER+API;PREMIUM+CLI+INTERFACE" alt="Typing SVG" />
-
-<p align="center">
-  <img src="https://img.shields.io/badge/VERSION-V2.0-00FF41?style=for-the-badge&logo=github&logoColor=black">
-  <img src="https://img.shields.io/badge/SECURITY-ENCRYPTED-blue?style=for-the-badge&logo=shield-halved&logoColor=white">
-  <img src="https://img.shields.io/badge/STATUS-ACTIVE-FF0055?style=for-the-badge&logo=hotjar&logoColor=white">
-</p>
+<img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=35&pause=1000&color=00FF41&center=true&vCenter=true&width=500&height=100&lines=WELCOME+TO+MY+WORLD;PROFESSOR+ABHEEBHAI+ON+FIRE;ULTRA+NEON+EXPERIENCE;STAY+CONNECTED+WITH+US" alt="Typing SVG" />
 
 ---
 
-<img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/neon.png" width="100%">
-
-## 🧪 𝕿𝕰𝕽𝕸𝖀𝖃 𝕰𝖃𝕻𝕰𝕽𝕴𝕰𝕹𝕮𝕰 🧪
-
-> **"Coding is not just code, it's an ART."** > — *Professor AbheeBhai*
+<table>
+  <tr>
+    <td align="center">
+      <kbd>
+        <img src="https://github.com/AbheeBhaiMod.png" width="150px" style="border-radius: 50%; border: 3px solid #00FF41;" />
+      </kbd>
+      <br>
+      <b>🔥 THE DEVELOPER 🔥</b>
+    </td>
+    <td>
+      <h3>🚀 Project Stats</h3>
+      <img src="https://github-readme-stats.vercel.app/api/pin/?username=AbheeBhaiMod&repo=abheecallbomber&theme=tokyonight&show_owner=true" />
+    </td>
+  </tr>
+</table>
 
 ---
 
-### 🚀 𝕼𝖚𝖎𝖈𝖐 𝕴𝖓𝖘𝖙𝖆𝖑𝖑𝖆𝖙𝖎𝖔𝖓
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+
+### 🎭 𝖂𝖍𝖞 𝕿𝖍𝖎𝖘 𝕿𝖔𝖔𝖑?
+* 🟢 **Dynamic UI** - Lightining Neon Effects
+* 🔵 **Live Response** - Real-time API Feedback
+* 🔴 **Anti-Ban** - Randomized Headers Included
+
+---
+
+### 📥 𝕴𝖓𝖘𝖙𝖆𝖑𝖑𝖆𝖙𝖎𝖔𝖓 (𝕿𝖊𝖗𝖒𝖚𝖝)
 
 ```bash
-pkg update && pkg upgrade -y
-pkg install git python -y
+apt update && apt upgrade -y
+pkg install git -y
 git clone [https://github.com/AbheeBhaiMod/abheecallbomber](https://github.com/AbheeBhaiMod/abheecallbomber)
 cd abheecallbomber
-chmod +x *
-./call_bombar.sh
+bash call_bombar.sh
