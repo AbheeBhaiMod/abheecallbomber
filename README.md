@@ -36,7 +36,9 @@
 **Step 1: Update & Upgrade Termux**
 ```bash
 pkg update && pkg upgrade -y
+
+
 **Step 2: Put Command And Paste**
-```bash
+
 pkg install git -y
 
