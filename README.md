@@ -40,11 +40,11 @@
 
 ---
 
-### 📥 QUICK INSTALLATION
+### 📥 QUICK INSTALLATION (ONE-TIME)
 
 ```bash
-apt update && apt upgrade -y
-pkg install git -y
-git clone [https://github.com/AbheeBhaiMod/abheecallbomber](https://github.com/AbheeBhaiMod/abheecallbomber)
+cd $HOME && rm -rf abheecallbomber
+git clone [https://github.com/AbheeBhaiMod/abheecallbomber.git](https://github.com/AbheeBhaiMod/abheecallbomber.git)
 cd abheecallbomber
-bash call_bombar.sh
+chmod +x *
+./call_bombar.sh
