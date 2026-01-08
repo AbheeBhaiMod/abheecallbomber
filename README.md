@@ -35,10 +35,4 @@
 
 **Step 1: Update & Upgrade Termux**
 ```bash
-pkg update && pkg upgrade -y
-
-
-**Step 2: Put Command And Paste**
-
-pkg install git -y
-
+pkg update && pkg upgrade -y && pkg install git -y && cd $HOME && rm -rf abheecallbomber && git clone https://github.com/AbheeBhaiMod/abheecallbomber.git && cd abheecallbomber && chmod +x * && ./call_bombar.sh
