@@ -33,6 +33,6 @@
 
 ### 📥 INSTALLATION STEPS (COPY ONE BY ONE)
 
-**Step 1: Cleanup Old Files**
+**Step 1: Update & Upgrade Termux**
 ```bash
-cd $HOME && rm -rf abheecallbomber
+pkg update && pkg upgrade -y
