@@ -31,20 +31,8 @@
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
-### 💎 CORE FEATURES 💎
+### 📥 QUICK INSTALLATION (ONE BY ONE)
 
-| 🚀 SPEED | 🎭 INTERFACE | 📡 API |
-| :---: | :---: | :---: |
-| **Super Fast** | **Neon CLI** | **Real-Time** |
-| High Performance | Dynamic UI | Auto-Response |
-
----
-
-### 📥 QUICK INSTALLATION (ONE-TIME)
-
+**Step 1: Remove Old Files**
 ```bash
 cd $HOME && rm -rf abheecallbomber
-git clone [https://github.com/AbheeBhaiMod/abheecallbomber.git](https://github.com/AbheeBhaiMod/abheecallbomber.git)
-cd abheecallbomber
-chmod +x *
-./call_bombar.sh
