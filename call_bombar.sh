@@ -24,7 +24,7 @@ banner() {
     echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo -e "${W} [ ${R}● ${W}] ${G}Developer  : ${W}PROFESSOR ABHEEBHAI"
     echo -e "${W} [ ${R}● ${W}] ${G}Status     : ${Y}Premium / Active"
-    echo -e "${W} [ ${R}● ${W}] ${G}WhatsApp   : ${C}https://bit.ly/AbheeBhai"
+    echo -e "${W} [ ${R}● ${W}] ${G}WhatsApp   : ${C}https://whatsapp.com/channel/0029Vb7JWGbGpLHQ9x2sKP1O"
     echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${N}"
 }
 
@@ -34,20 +34,30 @@ trap 'echo -e "\n\n${R}[!] STOPPING PROCESS... BYE!${N}"; exit' INT
 # --- MAIN EXECUTION ---
 banner
 
-# Stylish Input
-echo -ne "${Y}[${W}?${Y}] ${G}ENTER TARGET NUMBER ${W}(With Country Code): ${W}"
+# Input Target
+echo -ne "${Y}[${W}?${Y}] ${G}ENTER TARGET NUMBER: ${W}"
 read target
 
 if [[ -z "$target" ]]; then
     echo -e "\n${R}[!] ERROR: Number blank nahi chorr sakte!${N}"
-    sleep 2
     exit 1
+fi
+
+# Timer Option
+echo -e "\n${C}[ OPTION ] HOW LONG DO YOU WANT TO BOMB?"
+echo -e "${W}1. Unlimited Attacks"
+echo -e "${W}2. Set Custom Timer (Seconds)"
+echo -ne "${Y}[${W}?${Y}] ${G}CHOOSE OPTION (1/2): ${W}"
+read choice
+
+if [[ "$choice" == "2" ]]; then
+    echo -ne "${Y}[${W}?${Y}] ${G}ENTER TIME IN SECONDS: ${W}"
+    read seconds
+    end_time=$((SECONDS + seconds))
 fi
 
 # Starting Animation
 echo -e "\n${C}[*] INITIALIZING ENCRYPTED TUNNEL...${N}"
-sleep 1
-echo -e "${C}[*] CONNECTING TO PREMIUM SERVER...${N}"
 sleep 1
 echo -e "${G}[+] CONNECTION ESTABLISHED!${N}"
 sleep 1
@@ -57,12 +67,18 @@ echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━�
 # BOMBING LOOP
 count=1
 while true; do
-    # Simulation of different API endpoints
+    # Check Timer for Option 2
+    if [[ "$choice" == "2" && $SECONDS -ge $end_time ]]; then
+        echo -e "\n${Y}[!] TIMER FINISHED! ATTACK COMPLETED.${N}"
+        exit 0
+    fi
+
+    # Simulation
     echo -e "${W}[${C}#${W}] ${C}SENDING REQUEST ${count}...${N}"
-    sleep 1.5
+    sleep 1.2
     echo -e "${W}[${G}✔${W}] ${G}SUCCESS: ${W}Packet Delivered to ${Y}$target${N}"
     echo -e "${P}──────────────────────────────────────────────────────${N}"
     
     ((count++))
-    sleep 2 # Pause between calls
+    sleep 1.5
 done
