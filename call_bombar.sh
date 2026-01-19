@@ -1,18 +1,23 @@
 #!/bin/bash
 
-# --- COLORS ---
-G='\e[1;32m' # Green
-R='\e[1;31m' # Red
-B='\e[1;34m' # Blue
-Y='\e[1;33m' # Yellow
-C='\e[1;36m' # Cyan
-W='\e[1;37m' # White
-P='\e[1;35m' # Purple
+# --- ADVANCED NEON COLORS ---
+G='\e[1;32m' # Neon Green
+R='\e[1;31m' # Danger Red
+B='\e[1;34m' # Deep Blue
+Y='\e[1;33m' # Warning Yellow
+C='\e[1;36m' # Cyber Cyan
+W='\e[1;37m' # Ghost White
+P='\e[1;35m' # Toxic Purple
 N='\e[0m'    # Reset
 
-# --- BANNER FUNCTION ---
+# --- DANGEROUS BANNER ---
 banner() {
     clear
+    echo -e "${R}        .---.        .-----------."
+    echo -e "       /     \      /  💥 DANGER 💥"
+    echo -e "      | () () |    /  RESTRICTED  "
+    echo -e "       \  ^  /    '  ACCESS ONLY  "
+    echo -e "        |||||       '-----------'"
     echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo -e "${C}   ██████╗ █████╗ ██╗     ██╗     "
     echo -e "${C}  ██╔════╝██╔══██╗██║     ██║     "
@@ -20,65 +25,68 @@ banner() {
     echo -e "${C}  ██║     ██╔══██║██║     ██║     "
     echo -e "${C}  ╚██████╗██║  ██║███████╗███████╗"
     echo -e "${C}   ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝"
-    echo -e "${G}            C A L L   B O M B E R   V 2"
+    echo -e "${R}            D E S T R U C T O R   V 2"
     echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    echo -e "${W} [ ${R}● ${W}] ${G}Developer  : ${W}PROFESSOR ABHEEBHAI"
-    echo -e "${W} [ ${R}● ${W}] ${G}Status     : ${Y}Premium / Active"
-    echo -e "${W} [ ${R}● ${W}] ${G}WhatsApp   : ${C}https://whatsapp.com/channel/0029Vb7JWGbGpLHQ9x2sKP1O"
+    echo -e "${W} [ ${R}💀 ${W}] ${G}OWNER     : ${W}PROFESSOR ABHEEBHAI"
+    echo -e "${W} [ ${R}💀 ${W}] ${G}THREAT    : ${R}CRITICAL"
+    echo -e "${W} [ ${R}💀 ${W}] ${G}WHATSAPP  : ${C}https://whatsapp.com/channel/0029Vb7JWGbGpLHQ9x2sKP1O"
     echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${N}"
 }
 
-# --- EXIT HANDLER ---
-trap 'echo -e "\n\n${R}[!] STOPPING PROCESS... BYE!${N}"; exit' INT
+trap 'echo -e "\n\n${R}[!] SYSTEM OVERRIDE DETECTED... SHUTTING DOWN!${N}"; exit' INT
 
-# --- MAIN EXECUTION ---
 banner
 
+# Fake Hacking Animation
+echo -e "${R}[*] SCANNING GLOBAL PROXY SERVERS...${N}"
+sleep 1
+echo -e "${G}[+] PROXY BYPASS SUCCESSFUL [127.0.8.1]${N}"
+sleep 0.5
+echo -e "${Y}[!] WARNING: FIREWALL BREACH IN PROGRESS...${N}"
+sleep 1
+echo -e "${G}[+] TARGET VULNERABILITY FOUND!${N}"
+echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${N}"
+
 # Input Target
-echo -ne "${Y}[${W}?${Y}] ${G}ENTER TARGET NUMBER: ${W}"
+echo -ne "${R}[${W}#${R}] ${G}ENTER TARGET (PHONE): ${W}"
 read target
 
 if [[ -z "$target" ]]; then
-    echo -e "\n${R}[!] ERROR: Number blank nahi chorr sakte!${N}"
+    echo -e "\n${R}[✖] CRITICAL ERROR: NO TARGET DEFINED!${N}"
     exit 1
 fi
 
-# Timer Option
-echo -e "\n${C}[ OPTION ] HOW LONG DO YOU WANT TO BOMB?"
-echo -e "${W}1. Unlimited Attacks"
-echo -e "${W}2. Set Custom Timer (Seconds)"
-echo -ne "${Y}[${W}?${Y}] ${G}CHOOSE OPTION (1/2): ${W}"
+# Mode Selection
+echo -e "\n${P}[ SELECT ATTACK PROTOCOL ]"
+echo -e "${W}1. ⚡ HYPER BOMBING (Unlimited)"
+echo -e "${W}2. ⏱️ TIMED DESTRUCTION (Custom Timer)"
+echo -ne "${R}[${W}#${R}] ${G}CHOOSE MODE: ${W}"
 read choice
 
 if [[ "$choice" == "2" ]]; then
-    echo -ne "${Y}[${W}?${Y}] ${G}ENTER TIME IN SECONDS: ${W}"
+    echo -ne "${R}[${W}#${R}] ${G}SECONDS: ${W}"
     read seconds
     end_time=$((SECONDS + seconds))
 fi
 
-# Starting Animation
-echo -e "\n${C}[*] INITIALIZING ENCRYPTED TUNNEL...${N}"
-sleep 1
-echo -e "${G}[+] CONNECTION ESTABLISHED!${N}"
-sleep 1
-echo -e "\n${Y}🚀 BOMBING STARTED ON: ${W}$target${N}"
+echo -e "\n${R}[!] BYPASSING CARRIER ENCRYPTION...${N}"
+sleep 1.5
+echo -e "${G}[✔] ATTACK AUTHORIZED ON: ${W}$target${N}"
+echo -e "${R}🚀 INJECTING PACKETS...${N}"
 echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${N}"
 
-# BOMBING LOOP
+# DANGEROUS LOOP
 count=1
 while true; do
-    # Check Timer for Option 2
     if [[ "$choice" == "2" && $SECONDS -ge $end_time ]]; then
-        echo -e "\n${Y}[!] TIMER FINISHED! ATTACK COMPLETED.${N}"
+        echo -e "\n${G}[✔] TARGET NEUTRALIZED. SESSION ENDED.${N}"
         exit 0
     fi
 
-    # Simulation
-    echo -e "${W}[${C}#${W}] ${C}SENDING REQUEST ${count}...${N}"
-    sleep 1.2
-    echo -e "${W}[${G}✔${W}] ${G}SUCCESS: ${W}Packet Delivered to ${Y}$target${N}"
-    echo -e "${P}──────────────────────────────────────────────────────${N}"
+    # Matrix Style Success Message
+    echo -e "${R}[${W}${count}${R}] ${C}REQUEST SENT ${G}>> ${W}Target: $target ${G}[STABLE]${N}"
+    echo -e "${Y}   ↳ DATA INJECTION: ${R}COMPLETED${N}"
     
     ((count++))
-    sleep 1.5
+    sleep 1 # Super Fast
 done
