@@ -1,41 +1,68 @@
 #!/bin/bash
 
-# Banner Function - Aapka naya Name aur Link yahan hai
+# --- COLORS ---
+G='\e[1;32m' # Green
+R='\e[1;31m' # Red
+B='\e[1;34m' # Blue
+Y='\e[1;33m' # Yellow
+C='\e[1;36m' # Cyan
+W='\e[1;37m' # White
+P='\e[1;35m' # Purple
+N='\e[0m'    # Reset
+
+# --- BANNER FUNCTION ---
 banner() {
     clear
-    echo -e "\e[1;32m"
-    echo " ██████╗ █████╗ ██╗     ██╗     "
-    echo "██╔════╝██╔══██╗██║     ██║     "
-    echo "██║     ███████║██║     ██║     "
-    echo "██║     ██╔══██║██║     ██║     "
-    echo "╚██████╗██║  ██║███████╗███████╗"
-    echo " ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝"
-    echo -e "\e[0;32m         CALL  BOMBER\e[0m"
-    echo -e "\e[1;31m[+] Developed by: PROFESSOR-ABHEEBHAI\e[0m"
-    echo -e "\e[1;34m[+] Join my WhatsApp Channel:\e[0m \e[4;36mhttps://whatsapp.com/channel/0029Vb7JWGbGpLHQ9x2sKP1O\e[0m"
-    echo -e "\e[1;90m--------------------------------------------------\e[0m"
+    echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo -e "${C}   ██████╗ █████╗ ██╗     ██╗     "
+    echo -e "${C}  ██╔════╝██╔══██╗██║     ██║     "
+    echo -e "${C}  ██║     ███████║██║     ██║     "
+    echo -e "${C}  ██║     ██╔══██║██║     ██║     "
+    echo -e "${C}  ╚██████╗██║  ██║███████╗███████╗"
+    echo -e "${C}   ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝"
+    echo -e "${G}            C A L L   B O M B E R   V 2"
+    echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo -e "${W} [ ${R}● ${W}] ${G}Developer  : ${W}PROFESSOR ABHEEBHAI"
+    echo -e "${W} [ ${R}● ${W}] ${G}Status     : ${Y}Premium / Active"
+    echo -e "${W} [ ${R}● ${W}] ${G}WhatsApp   : ${C}https://bit.ly/AbheeBhai"
+    echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${N}"
 }
 
-# Cleanup on exit
-trap 'echo -e "\n\e[1;31m[!] Exiting...\e[0m"; exit' INT
+# --- EXIT HANDLER ---
+trap 'echo -e "\n\n${R}[!] STOPPING PROCESS... BYE!${N}"; exit' INT
 
-# Execution
+# --- MAIN EXECUTION ---
 banner
-read -p $'\e[1;32m[?] Enter phone number: \e[0m' target
+
+# Stylish Input
+echo -ne "${Y}[${W}?${Y}] ${G}ENTER TARGET NUMBER ${W}(With Country Code): ${W}"
+read target
 
 if [[ -z "$target" ]]; then
-    echo -e "\e[1;31m[!] Error: Number enter karein!\e[0m"
+    echo -e "\n${R}[!] ERROR: Number blank nahi chorr sakte!${N}"
+    sleep 2
     exit 1
 fi
 
-echo -e "\e[1;33m[*] Starting process on: $target\e[0m"
+# Starting Animation
+echo -e "\n${C}[*] INITIALIZING ENCRYPTED TUNNEL...${N}"
 sleep 1
+echo -e "${C}[*] CONNECTING TO PREMIUM SERVER...${N}"
+sleep 1
+echo -e "${G}[+] CONNECTION ESTABLISHED!${N}"
+sleep 1
+echo -e "\n${Y}🚀 BOMBING STARTED ON: ${W}$target${N}"
+echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${N}"
 
-# Display Loop (Sirf Success message dikhayega, API removed)
+# BOMBING LOOP
+count=1
 while true; do
-    echo -e "\n\e[1;36m[+] Sending request to:\e[0m $target"
-    echo -e "\e[1;32m[✔] Status: Success\e[0m"
-    echo -e "\e[1;90m----------------------------------------\e[0m"
+    # Simulation of different API endpoints
+    echo -e "${W}[${C}#${W}] ${C}SENDING REQUEST ${count}...${N}"
+    sleep 1.5
+    echo -e "${W}[${G}✔${W}] ${G}SUCCESS: ${W}Packet Delivered to ${Y}$target${N}"
+    echo -e "${P}──────────────────────────────────────────────────────${N}"
     
-    sleep 3
+    ((count++))
+    sleep 2 # Pause between calls
 done
