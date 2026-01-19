@@ -28,24 +28,14 @@ banner() {
     echo -e "${R}            D E S T R U C T O R   V 2"
     echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo -e "${W} [ ${R}💀 ${W}] ${G}OWNER     : ${W}PROFESSOR ABHEEBHAI"
-    echo -e "${W} [ ${R}💀 ${W}] ${G}THREAT    : ${R}CRITICAL"
     echo -e "${W} [ ${R}💀 ${W}] ${G}WHATSAPP  : ${C}https://whatsapp.com/channel/0029Vb7JWGbGpLHQ9x2sKP1O"
     echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${N}"
 }
 
-trap 'echo -e "\n\n${R}[!] SYSTEM OVERRIDE DETECTED... SHUTTING DOWN!${N}"; exit' INT
+# --- EXIT HANDLER (Manual Stop) ---
+trap 'echo -e "\n\n${R}[!] EMERGENCY STOP: SYSTEM OVERRIDE BY USER!${N}"; exit' INT
 
 banner
-
-# Fake Hacking Animation
-echo -e "${R}[*] SCANNING GLOBAL PROXY SERVERS...${N}"
-sleep 1
-echo -e "${G}[+] PROXY BYPASS SUCCESSFUL [127.0.8.1]${N}"
-sleep 0.5
-echo -e "${Y}[!] WARNING: FIREWALL BREACH IN PROGRESS...${N}"
-sleep 1
-echo -e "${G}[+] TARGET VULNERABILITY FOUND!${N}"
-echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${N}"
 
 # Input Target
 echo -ne "${R}[${W}#${R}] ${G}ENTER TARGET (PHONE): ${W}"
@@ -59,34 +49,45 @@ fi
 # Mode Selection
 echo -e "\n${P}[ SELECT ATTACK PROTOCOL ]"
 echo -e "${W}1. ⚡ HYPER BOMBING (Unlimited)"
-echo -e "${W}2. ⏱️ TIMED DESTRUCTION (Custom Timer)"
+echo -e "${W}2. ⏱️ TIMED DESTRUCTION (Custom Seconds)"
+echo -e "${W}3. 🔢 MANUAL COUNT (Specific Number of Times)"
 echo -ne "${R}[${W}#${R}] ${G}CHOOSE MODE: ${W}"
 read choice
 
 if [[ "$choice" == "2" ]]; then
-    echo -ne "${R}[${W}#${R}] ${G}SECONDS: ${W}"
+    echo -ne "${R}[${W}#${R}] ${G}ENTER SECONDS: ${W}"
     read seconds
     end_time=$((SECONDS + seconds))
+elif [[ "$choice" == "3" ]]; then
+    echo -ne "${R}[${W}#${R}] ${G}HOW MANY TIMES TO RUN?: ${W}"
+    read max_count
 fi
 
 echo -e "\n${R}[!] BYPASSING CARRIER ENCRYPTION...${N}"
-sleep 1.5
+sleep 1
 echo -e "${G}[✔] ATTACK AUTHORIZED ON: ${W}$target${N}"
-echo -e "${R}🚀 INJECTING PACKETS...${N}"
+echo -e "${R}🚀 INJECTING PACKETS... (Press CTRL+C to Stop)${N}"
 echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${N}"
 
-# DANGEROUS LOOP
+# ATTACK LOOP
 count=1
 while true; do
+    # Check Timer (Option 2)
     if [[ "$choice" == "2" && $SECONDS -ge $end_time ]]; then
-        echo -e "\n${G}[✔] TARGET NEUTRALIZED. SESSION ENDED.${N}"
+        echo -e "\n${G}[✔] TIME LIMIT REACHED. TARGET NEUTRALIZED.${N}"
         exit 0
     fi
 
-    # Matrix Style Success Message
+    # Check Manual Count (Option 3)
+    if [[ "$choice" == "3" && $count -gt $max_count ]]; then
+        echo -e "\n${G}[✔] COMPLETED $max_count ATTACKS successfully.${N}"
+        exit 0
+    fi
+
+    # Matrix Style Attack UI
     echo -e "${R}[${W}${count}${R}] ${C}REQUEST SENT ${G}>> ${W}Target: $target ${G}[STABLE]${N}"
-    echo -e "${Y}   ↳ DATA INJECTION: ${R}COMPLETED${N}"
+    echo -e "${Y}   ↳ STATUS: ${R}PACKET INJECTED${N}"
     
     ((count++))
-    sleep 1 # Super Fast
+    sleep 1 # Speed control
 done
