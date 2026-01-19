@@ -10,14 +10,9 @@ W='\e[1;37m' # Ghost White
 P='\e[1;35m' # Toxic Purple
 N='\e[0m'    # Reset
 
-# --- DANGEROUS BANNER ---
+# --- PROFESSIONAL BANNER ---
 banner() {
     clear
-    echo -e "${R}        .---.        .-----------."
-    echo -e "       /     \      /  💥 DANGER 💥"
-    echo -e "      | () () |    /  RESTRICTED  "
-    echo -e "       \  ^  /    '  ACCESS ONLY  "
-    echo -e "        |||||       '-----------'"
     echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
     echo -e "${C}   ██████╗ █████╗ ██╗     ██╗     "
     echo -e "${C}  ██╔════╝██╔══██╗██║     ██║     "
@@ -25,10 +20,10 @@ banner() {
     echo -e "${C}  ██║     ██╔══██║██║     ██║     "
     echo -e "${C}  ╚██████╗██║  ██║███████╗███████╗"
     echo -e "${C}   ╚═════╝╚═╝  ╚═╝╚══════╝╚══════╝"
-    echo -e "${R}            D E S T R U C T O R   V 2"
+    echo -e "${G}            C A L L   B O M B E R   V 2"
     echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-    echo -e "${W} [ ${R}💀 ${W}] ${G}OWNER     : ${W}PROFESSOR ABHEEBHAI"
-    echo -e "${W} [ ${R}💀 ${W}] ${G}WHATSAPP  : ${C}https://whatsapp.com/channel/0029Vb7JWGbGpLHQ9x2sKP1O"
+    echo -e "${W} [ ${G}● ${W}] ${G}OWNER     : ${W}PROFESSOR ABHEEBHAI"
+    echo -e "${W} [ ${G}● ${W}] ${G}WHATSAPP  : ${C}https://whatsapp.com/channel/0029Vb7JWGbGpLHQ9x2sKP1O"
     echo -e "${G}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${N}"
 }
 
@@ -38,7 +33,7 @@ trap 'echo -e "\n\n${R}[!] EMERGENCY STOP: SYSTEM OVERRIDE BY USER!${N}"; exit' 
 banner
 
 # Input Target
-echo -ne "${R}[${W}#${R}] ${G}ENTER TARGET (PHONE): ${W}"
+echo -ne "${Y}[${W}#${Y}] ${G}ENTER TARGET (PHONE): ${W}"
 read target
 
 if [[ -z "$target" ]]; then
@@ -51,19 +46,19 @@ echo -e "\n${P}[ SELECT ATTACK PROTOCOL ]"
 echo -e "${W}1. ⚡ HYPER BOMBING (Unlimited)"
 echo -e "${W}2. ⏱️ TIMED DESTRUCTION (Custom Seconds)"
 echo -e "${W}3. 🔢 MANUAL COUNT (Specific Number of Times)"
-echo -ne "${R}[${W}#${R}] ${G}CHOOSE MODE: ${W}"
+echo -ne "${Y}[${W}#${Y}] ${G}CHOOSE MODE: ${W}"
 read choice
 
 if [[ "$choice" == "2" ]]; then
-    echo -ne "${R}[${W}#${R}] ${G}ENTER SECONDS: ${W}"
+    echo -ne "${Y}[${W}#${Y}] ${G}ENTER SECONDS: ${W}"
     read seconds
     end_time=$((SECONDS + seconds))
 elif [[ "$choice" == "3" ]]; then
-    echo -ne "${R}[${W}#${R}] ${G}HOW MANY TIMES TO RUN?: ${W}"
+    echo -ne "${Y}[${W}#${Y}] ${G}HOW MANY TIMES TO RUN?: ${W}"
     read max_count
 fi
 
-echo -e "\n${R}[!] BYPASSING CARRIER ENCRYPTION...${N}"
+echo -e "\n${C}[!] BYPASSING CARRIER ENCRYPTION...${N}"
 sleep 1
 echo -e "${G}[✔] ATTACK AUTHORIZED ON: ${W}$target${N}"
 echo -e "${R}🚀 INJECTING PACKETS... (Press CTRL+C to Stop)${N}"
